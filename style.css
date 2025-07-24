@@ -1,0 +1,248 @@
+/* --- Glow & Bloom Stylesheet --- */
+/* This file styles the entire website. It's organized from top to bottom:
+   1. General Styles (applies to the whole page)
+   2. Header & Navigation
+   3. Hero Section (the big welcome area)
+   4. Featured Products
+   5. About Us Section
+   6. Footer
+   7. Responsive Design (for mobile phones)
+*/
+
+/* --- 1. General Styles --- */
+/* These are the basic rules for the whole page. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This makes layout calculations easier. */
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling when clicking links. */
+}
+
+body {
+  font-family: "Poppins", sans-serif; /* The main font for paragraphs. */
+  background-color: #fdfaf6; /* A soft, off-white background color. */
+  color: #5c5552; /* A dark, earthy brown for most text. */
+  line-height: 1.7; /* Sets the spacing between lines of text. */
+}
+
+.container {
+  width: 90%; /* The content will take up 90% of the screen width. */
+  max-width: 1100px; /* But it won't get wider than 1100px on large screens. */
+  margin: 0 auto; /* This centers the container. */
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif; /* A more elegant font for all headings. */
+  color: #3d3532; /* A darker brown for headings to make them stand out. */
+}
+
+/* --- 2. Header & Navigation --- */
+/* Styles for the logo and the top menu. */
+.main-header {
+  background-color: #ffffff;
+  height: 80px; /* A fixed height for the header. */
+  padding: 0 20px;
+  display: flex; /* Aligns the logo and nav side-by-side. */
+  align-items: center; /* Vertically centers the items in the header. */
+  border-bottom: 1px solid #eee; /* A subtle line to separate it from the content. */
+
+  /* The following lines make the header stick to the top when you scroll. */
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensures the header stays on top of other content. */
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between; /* Pushes logo to the left and nav to the right. */
+  align-items: center;
+  width: 100%;
+}
+
+.logo a {
+  text-decoration: none;
+  font-family: "Lora", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3d3532;
+  letter-spacing: 1px; /* Adds a little space between letters. */
+}
+
+.main-nav ul {
+  list-style: none; /* Removes the default bullet points from the list. */
+  display: flex; /* Puts the navigation links in a row. */
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #5c5552;
+  font-weight: 600; /* Makes the nav links slightly bolder. */
+  padding: 10px 20px; /* Gives the links some space to breathe. */
+  transition: color 0.3s ease; /* Smooth color change on hover. */
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #d1a3a3; /* A dusty rose color for the active link or on hover. */
+}
+
+/* --- 3. Hero Section --- */
+/* Styles for the big welcome image and text. */
+.hero {
+  /* This uses a background image with a semi-transparent dark overlay. */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1500")
+      no-repeat center center/cover;
+  height: 60vh; /* The hero section will be 60% of the viewport height. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff; /* All text inside the hero section will be white. */
+}
+
+.hero h1 {
+  font-size: 3.5rem; /* Large font size for the main heading. */
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow to make text readable. */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #d1a3a3;
+  color: #ffffff;
+  padding: 15px 35px;
+  text-decoration: none;
+  border-radius: 50px; /* Creates a pill-shaped button. */
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects. */
+}
+
+.btn:hover {
+  background-color: #3d3532; /* A slightly darker shade on hover. */
+  transform: translateY(-3px); /* Lifts the button slightly on hover. */
+}
+
+/* --- 4. Featured Products --- */
+/* Styles for the product cards. */
+.featured-products {
+  padding: 80px 0; /* Adds space above and below the section. */
+}
+
+.featured-products h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid. */
+  gap: 30px; /* The space between the product cards. */
+}
+
+.product-item {
+  background-color: #ffffff;
+  border-radius: 8px; /* Slightly rounded corners for the cards. */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* A very subtle shadow. */
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect. */
+}
+
+.product-item:hover {
+  transform: translateY(-10px); /* Lifts the card up on hover. */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* A more pronounced shadow on hover. */
+}
+
+.product-item img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover; /* Ensures the image covers the area without stretching. */
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.product-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d1a3a3; /* Uses the accent color for the price. */
+}
+
+/* --- 5. About Us Section --- */
+/* Styles for the "About Us" text area. */
+.about-us {
+  background-color: #ffffff; /* A white background to stand out from the page. */
+  padding: 80px 0;
+  text-align: center;
+}
+
+.about-us .container {
+  max-width: 700px; /* Narrows the content to make it easier to read. */
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* --- 6. Footer --- */
+/* Styles for the bottom of the page with copyright and social links. */
+footer {
+  background-color: #3d3532; /* A dark brown background for the footer. */
+  color: #e0e0e0; /* A light gray for the footer text. */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.social-links {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.social-links li {
+  display: inline-block; /* Puts the social icons in a row. */
+  margin: 0 15px; /* Adds space between the icons. */
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 1.5rem; /* Makes the Font Awesome icons larger. */
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #d1a3a3; /* Changes icon color to the brand accent on hover. */
+}
+
+/* --- 7. Responsive Design --- */
+/* These rules adjust the site for smaller screens like phones. */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Stacks the product cards into a single column. */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Reduces the heading size on mobile. */
+  }
+
+  /* This would be where you add a hamburger menu, but for now we hide the nav. */
+  .main-nav {
+    display: none;
+  }
+}
