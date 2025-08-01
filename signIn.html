@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signin</title>
+      <link rel="stylesheet" href="styleheadandfooter.css">
+
     <style>
         body{
             margin: 0;
@@ -34,6 +36,26 @@
     </style>
 </head>
 <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="logo">
+          <a href="#index.html">GLOW & BLOOM</a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="signIn.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 <center>
 
     <form style="border:1px dashed white; margin:100px 20px; padding-bottom:20px; display:flex; justify-content:center; width:50vw;height:100%;background-color: rgb(243, 148, 220); align-items:center;">
@@ -54,6 +76,22 @@
         
     </form>
 </center>
+<footer>
+      <div class="container">
+        <p>&copy; 2025 Glow & Bloom. All rights reserved.</p>
+        <ul class="social-links">
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
     
 </body>
 </html>
