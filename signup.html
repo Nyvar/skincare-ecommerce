@@ -2,87 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <link rel="stylesheet" href="styleheadandfooter.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styleheadandfooter.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-        .signup {
-            border: 1px solid black;
-            background-color: black;
-            border-radius: 20px;
-            color: white;
-            box-shadow: 3px 2px 5px rgb(24, 15, 44);
-            padding: 3px 10px;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        .signup:hover {
-            cursor: pointer;
-            background-color: gray;
-        }
+    .signup {
+      border: 1px solid black;
+      background-color: black;
+      border-radius: 20px;
+      color: white;
+      box-shadow: 3px 2px 5px rgb(24, 15, 44);
+      padding: 3px 10px;
+    }
 
-        .goback {
-            font-size: 13px;
-            color: black;
-        }
+    .signup:hover {
+      cursor: pointer;
+      background-color: gray;
+    }
 
-        .goback:hover {
-            cursor: pointer;
-            color: white;
-        }
-    </style>
+    .goback {
+      font-size: 13px;
+      color: black;
+    }
+
+    .goback:hover {
+      cursor: pointer;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
-    <header class="main-header">
-      <div class="container">
-        <div class="logo">
-          <a href="#index.html">GLOW & BLOOM</a>
-        </div>
-        <button class="menu-toggle" id="menu-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <nav class="main-nav" id="main-nav">
-          <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="signIn.html">Contact</a></li>
-          </ul>
-        </nav>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <a href="#index.html">GLOW & BLOOM</a>
       </div>
-    </header>
-    <center>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
 
-        <form
-            style="border:1px dashed white; margin:100px 20px; padding-bottom:20px; display:flex; justify-content:center;align-items:center; width:50vw;height:100%; background-color: rgb(243, 148, 220);">
-            <div>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="signIn.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <center>
 
-                <h2>Sign Up</h2>
-                <p style="display: flex; text-align:left;">your account</p>
-                <input type="email" placeholder="yourname@gmail.com">
-                <p style="display: flex; text-align:left;">password</p>
-                <input type="password" placeholder="****" maxlength="4">
-                <p style="display: flex; text-align:left;">confirm password</p>
-                <input type="password" placeholder="****" maxlength="4">
-                <br><br>
-                <a href="javascript:history.back()">
-                    <button class="signup">sign up</button>
-                </a>
-                <br><br>
-                <a class="goback" href="javascript:history.back()">No Thanks,</a>
-            </div>
+    <form
+      style="border:1px dashed white; margin:100px 20px; padding-bottom:20px; display:flex; justify-content:center;align-items:center; width:50vw;height:100%; background-color: rgb(243, 148, 220);">
+      <div>
 
-        </form>
-    </center>
-    <footer>
+        <h2>Sign Up</h2>
+        <p style="display: flex; text-align:left;">your account</p>
+        <input type="email" placeholder="yourname@gmail.com">
+        <p style="display: flex; text-align:left;">password</p>
+        <input type="password" placeholder="****" maxlength="4">
+        <p style="display: flex; text-align:left;">confirm password</p>
+        <input type="password" placeholder="****" maxlength="4">
+        <br><br>
+        <a href="javascript:history.back()">
+          <button class="signup">sign up</button>
+        </a>
+        <br><br>
+        <a class="goback" href="javascript:history.back()">No Thanks,</a>
+      </div>
+
+    </form>
+  </center>
+  <footer>
       <div class="container">
         <p>&copy; 2025 Glow & Bloom. All rights reserved.</p>
         <ul class="social-links">

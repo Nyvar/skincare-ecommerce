@@ -31,6 +31,10 @@
 .main-nav ul {
   list-style: none; /* Removes the default bullet points from the list. */
   display: flex; /* Puts the navigation links in a row. */
+  flex-wrap: wrap;
+  /* This centers the links nicely when they are on one or two lines. */
+  justify-content: center;
+  gap: 25px;
 }
 
 .main-nav a {
@@ -41,21 +45,192 @@
   transition: color 0.3s ease; /* Smooth color change on hover. */
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
 .main-nav a:hover,
 .main-nav a.active {
   color: #d1a3a3; /* A dusty rose color for the active link or on hover. */
 }
+/* --- Footer Updated for Visual Harmony --- */
 footer {
-  background: #2d1e1e;
-  color: #fff;
+  background-color: #3d3532;
+  color: #e0e0e0;
+  padding: 50px 20px;
   text-align: center;
-  padding: 20px;
-  margin-top: 30px;
 }
 
-footer {
-  background-color: #3d3532; 
-  color: #e0e0e0; 
-  padding: 40px 0;
-  text-align: center;
+footer p {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 40px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #d1a3a3;
+  transform: scale(1.1);
+}
+@media (max-width: 1024px) {
+  .main-header {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 1100;
+  }
+
+  .main-nav {
+    display: none;
+    background-color: #fff;
+    padding: 1rem 0;
+    position: relative;
+    border-top: 1px solid #eee;
+    z-index: 1000;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .main-nav ul li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .product-item h3 {
+    font-size: 18px;
+  }
+  .product-item p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .product-grid {
+    grid-template-columns: 1fr; /* Stacks the product cards into a single column. */
+  }
+  .product-item h3 {
+    margin-bottom: 18px;
+    font-size: 23px;
+  }
+  .product-item p {
+    font-size: 19px;
+  }
+  .hero h1 {
+    font-size: 2.5rem; /* Reduces the heading size on mobile. */
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .main-header .container {
+    /* Change the flex direction from row (default) to column */
+    flex-direction: column;
+    /* Add a nice gap between the stacked logo and nav */
+    gap: 1rem;
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .social-links li a {
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  footer p {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .text-content h4 {
+    font-size: 25px;
+  }
+  .text-content p {
+    font-size: 18px;
+  }
+  .description {
+    font-size: 18px;
+  }
 }
